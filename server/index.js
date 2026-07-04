@@ -26,6 +26,7 @@ app.use('/api/tenant', require('./routes/tenantRoutes'));
 app.use('/api/compatibility', require('./routes/compatibilityRoutes'));
 app.use('/api/interests', require('./routes/interestRoutes'));
 app.use('/api/chat', require('./routes/chatRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: { origin: '*' },
