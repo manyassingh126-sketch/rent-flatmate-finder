@@ -10,7 +10,9 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/listings', require('./routes/listingRoutes'));
+app.use('/api/tenant', require('./routes/tenantRoutes'));
 app.use('/uploads', express.static('uploads'));
+app.use('/api/compatibility', require('./routes/compatibilityRoutes'));
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
